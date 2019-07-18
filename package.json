@@ -4,6 +4,8 @@
   "description": "contact manager app built with MERN stack",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,17 @@
   "bugs": {
     "url": "https://github.com/graygabrielle/contact-keeper/issues"
   },
-  "homepage": "https://github.com/graygabrielle/contact-keeper#readme"
+  "homepage": "https://github.com/graygabrielle/contact-keeper#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.5"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "nodemon": "^1.19.1"
+  }
 }
