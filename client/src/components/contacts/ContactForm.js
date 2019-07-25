@@ -72,7 +72,11 @@ const ContactForm = () => {
       />{" "}
       Professional
       <div>
-        <input type="submit" value="Add Contact" />
+        <input
+          type="submit"
+          value="Add Contact"
+          className="btn btn-primary btn-block"
+        />
       </div>
     </form>
   );
