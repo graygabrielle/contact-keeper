@@ -17,6 +17,7 @@ import "./App.css";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
+  console.log("set auth token on app load");
 }
 
 const App = () => {
