@@ -4,7 +4,7 @@ import AlertContext from "../../context/alert/alertContext";
 const Register = () => {
   const alertContext = useContext(AlertContext);
 
-  const { setAlert } = alertContext;
+  const { setAlert, removeAlert } = alertContext;
 
   const [user, setUser] = useState({
     name: "",
@@ -24,10 +24,14 @@ const Register = () => {
 
   const onSubmit = e => {
     e.preventDefault();
+    removeAlert();
+
     if (name === "" || email === "" || password === "") {
       setAlert("Please complete all fields", "danger");
     } else if (password !== password2) {
       setAlert("Passwords do not match", "danger");
+    } else if (password.length < 6) {
+      setAlert("Password must contain at least 6 characters", "danger");
     } else {
       console.log("Register submit");
     }
