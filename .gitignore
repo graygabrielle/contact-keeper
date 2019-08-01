@@ -1,6 +1,5 @@
 
 .env
-default.json
 node_modules/ 
 
 # dependencies
