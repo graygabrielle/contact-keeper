@@ -54,17 +54,15 @@ router.post(
         }
       };
 
-      jwt.sign(
-        payload,
-        process.env.JWT_SECRET,
-        {
-          expiresIn: 36000
-        },
-        (err, token) => {
-          if (err) throw err;
-          res.json({ token });
-        }
-      );
+      const token = jwt.sign(payload, process.env.JWT_SECRET);
+
+      res.cookie("token", token, {
+        maxAge: 900000,
+        httpOnly: true,
+        sameSite: true
+      });
+
+      res.status(200).end();
     } catch (err) {
       console.error(err.message);
       res.status(500).send("Server error");
