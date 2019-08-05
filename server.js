@@ -2,14 +2,12 @@ const express = require("express");
 const connectDB = require("./config/db");
 const path = require("path");
 const app = express();
-const cookieParser = require("cookie-parser");
 
 // Connect database
 connectDB();
 
 // Init middleware
 app.use(express.json({ extended: false }));
-app.use(cookieParser);
 
 //Define routes
 app
