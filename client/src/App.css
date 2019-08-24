@@ -318,7 +318,13 @@ textarea {
 }
 
 input[type="submit"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
 button {
+  -webkit-appearance: none;
+  border-radius: 0;
   font: inherit;
 }
 
