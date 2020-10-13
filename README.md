@@ -19,13 +19,6 @@ Axios
 
 ![Screenshot](./img/contact-keeper.png)
 
-## Authors
-
-Gray Atkinson-Adams
-
-I built this app as part of a Udemy course by Brad Traversy--Traversy Media
-(React Front to Back 2019)
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
